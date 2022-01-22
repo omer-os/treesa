@@ -1,0 +1,177 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto:400,500,700);
+body,
+html {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: "Roboto", sans-serif;
+  overflow: hidden;
+}
+* {
+  box-sizing: border-box;
+  text-decoration: none;
+  color: black;
+}*::-webkit-scrollbar{display: none;}
+
+/* main code starts here */
+.main {
+  display: grid;
+  grid-template-columns: minmax(230px, 250px) 1fr;
+  grid-template-rows: 1fr;
+  height: 100vh;
+  gap: 20px;
+}
+
+.left-container {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto repeat(3, 1fr);
+  padding: 20px 0 0 25px;
+  overflow-y: scroll;
+}
+.logo{
+    background-image: url(./img/logo.png);
+    background-size: contain;
+    width: 140px;
+    height: 50px;
+    margin-bottom: 25px;
+}
+
+.right-container {
+  background-color: #79ff79;
+}
+
+
+
+
+
+
+
+
+
+
+/* left-container ---> filters */
+.filters {
+  display: grid;
+  list-style: none;
+  gap: 5px;
+}
+.filters .filters-title{
+    font-size: 1.4em;
+    font-weight: 600;
+    text-transform: capitalize;
+    margin-bottom: 5px;
+}
+
+.filters-checkbox{
+    margin-left: 20px;
+    font-size: 1em;
+    text-transform: capitalize;
+}
+.filters .filters-others-btn{
+    margin-left: 10px;
+    width: fit-content;
+    padding: 5px 10px;
+    display: flex;
+    align-items: center;
+    font-size: 1.1em;
+    font-weight: 600;
+    cursor: pointer;
+    gap: 9px;
+    border-radius: 5px;
+    border: none;
+    background-color: transparent;
+    margin-top: 5px;
+}.filters-others-btn:active{
+    transform: scale(0.9);
+}
+.down-arrow{
+    width: 12px;
+    height: 10px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* left-container --> price-range */
+.price-range{
+    margin-top: 20px;
+}
+.pice-range-title{
+    font-size: 1.2em;
+    font-weight: 600;
+    text-transform: capitalize;
+}
+.price-range-div{
+    font-size: 1.1em;
+    margin: 10px 0 0 20px;
+}
+.price-range-div input{
+    max-width: 60px;
+    padding: 5px;
+}
+.price-range-btn{
+    padding: 5px 15px;
+    border: none;
+    border-radius: 10px;
+    font-size: 1em;
+    color: white;
+    background-color: #4EAA57;
+    margin-top: 10px;
+    margin-left: 20px;
+    cursor: pointer;
+}.price-range-btn:active{
+    transform: scale(0.9);
+}
+
+
+
+
+
+
+
+
+
+/* left-container --> ratings */
+.ratings{
+    margin-top: 20px;
+}
+.ratings-title{
+    font-size: 1.2em;
+    font-weight: 600;
+    text-transform: capitalize;
+}
+
+.ratings-stars{
+    display: flex;
+    gap: 5px;
+    margin-left: 20px;
+    margin-top: 10px;
+}
+.full-star{
+    background-image: url(./img/fullstar.png);
+}
+.empty-star{
+    background-image: url(./img/emptystar.png);
+}
+.star{
+    cursor: pointer;
+    width: 20px;
+    height: 20px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}.star:active{
+    transform: scale(0.9);
+}

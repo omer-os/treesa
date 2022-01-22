@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Treesa</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="main">
+      <div class="left-container">
+        <div class="logo"></div>
+
+        <div class="filters">
+          <div class="filters-title">filters</div>
+          <div class="filters-checkbox"><input type="checkbox" />gardening</div>
+          <div class="filters-checkbox"><input type="checkbox" />plants</div>
+          <div class="filters-checkbox"><input type="checkbox" />flowers</div>
+          <div class="filters-checkbox"><input type="checkbox" />trees</div>
+          <button class="filters-others-btn">
+            others<img
+              src="./img/downarrow.png"
+              alt="down arrow"
+              class="down-arrow"
+            />
+          </button>
+        </div>
+
+        <div class="price-range">
+          <div class="pice-range-title">price range</div>
+          <div class="price-range-div">
+            Min :
+            <input type="number" min="10" class="price-range-input" />
+          </div>
+          <button class="price-range-btn">set the price</button>
+        </div>
+
+        <div class="ratings">
+          <div class="ratings-title">Ratings :</div>
+          <div class="ratings-stars">
+			<div class="star full-star"></div>
+			<div class="star full-star"></div>
+			<div class="star empty-star"></div>
+			<div class="star empty-star"></div>
+			<div class="star empty-star"></div>
+		  </div>
+        </div>
+      </div>
+
+      <div class="right-container">
+
+      </div>
+    </div>
+  </body>
+
+  <script src="./app.js"></script>
+</html>
