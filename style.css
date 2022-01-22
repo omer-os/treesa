@@ -13,15 +13,34 @@ html {
   color: black;
 }*::-webkit-scrollbar{display: none;}
 
+
+
+
+
+
+
 /* main code starts here */
 .main {
   display: grid;
   grid-template-columns: minmax(230px, 250px) 1fr;
   grid-template-rows: 1fr;
   height: 100vh;
-  gap: 20px;
+  gap: 5px;
 }
 
+
+
+
+
+
+
+
+
+
+
+
+
+/* left-container */
 .left-container {
   display: grid;
   grid-template-columns: 1fr;
@@ -35,10 +54,6 @@ html {
     width: 140px;
     height: 50px;
     margin-bottom: 25px;
-}
-
-.right-container {
-  background-color: #79ff79;
 }
 
 
@@ -174,4 +189,205 @@ html {
     background-position: center;
 }.star:active{
     transform: scale(0.9);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* right-container */
+.right-container {
+    background-color: #aaffaa;
+    display: grid;
+    grid-template-columns: 1fr;
+    overflow: hidden;
+    grid-template-rows: auto auto 1fr;
+    padding: 10px;
+    column-gap: 10px;
+}
+
+
+
+
+
+
+
+
+/* right-container --> nav section */
+.right-nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 20px 0 0;
+}
+.right-nav-pages{
+    display: flex;
+    gap: 15px;
+    font-size: 1.3em;
+    text-transform: capitalize;
+    font-weight: 600;
+    cursor: pointer;
+    align-items: baseline;
+}
+.lol{
+    color: #ACACAC;
+    font-weight: 400;
+    font-size: .9em;
+}.lol.current{
+    color: black;
+    font-weight: 600;
+    font-size: 1.1em;
+}.lol::after{
+    content: "";
+    width: 0;
+    height: 0;
+    transition: all .3s ease-in-out;
+}
+.lol.current::after{
+    content: "";
+    width: 100%;
+    height: 3px;
+    background-color: #4EAA57;
+    display: block;
+    margin-top: 3px;
+    border-radius: 5px;
+}
+.right-nav-cart-btn{
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    cursor: pointer;
+    padding: 5px 10px;
+    border-radius: 10px;
+    border: none;
+    background-color: #4EAA57;
+    color: white;
+    font-size: 1em;
+    font-weight: 600;
+}
+.right-nav-cart-btn:active{
+    transform: scale(0.9);
+}
+
+
+
+
+
+
+
+
+
+
+
+/* right-container --> search-input */
+.search-input{
+    margin: 25px 0 20px 0;
+    background-color: #E0E0E0;
+    max-width: 450px;
+    padding: 10px;
+    border: none;
+    border-radius: 10px;
+    background-image: url(./img/search.png);
+    background-size: contain 10px;
+    background-repeat: no-repeat;
+    background-position: 10px 10px;
+    font-size: 1em;
+    padding-left: 40px;
+}
+.search-input::-webkit-input-placeholder {
+    color: #9B9B9B;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/* right-container --> plants-container */
+.plants-container{
+    display: grid;
+    grid-template-columns: 1fr minmax(200px, 300px);
+    grid-template-rows: 1fr;
+}
+
+.all-plants-container{
+    display: grid;
+    grid-template-columns: repeat(3, minmax(220px, 1fr));
+    grid-template-rows: 300px;
+    overflow: scroll;
+    grid-auto-rows: 300px;
+    height: calc(100vh - 140px);
+    border-radius: 10px;
+    gap: 15px;
+}
+@media (max-width: 1250px){
+    .all-plants-container{
+        grid-template-columns: repeat(2, minmax(220px, 1fr));
+    }
+}
+
+@media (max-width: 1050px){
+    .all-plants-container{
+        margin: 0 40px;
+        grid-template-columns: repeat(1, minmax(220px, 1fr));
+        grid-template-rows: 400px;
+    }
+}
+
+
+
+
+.plant{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto 1fr auto auto auto;
+    background-color: white;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0,0,0,0.1);
+}
+.plant-like-icon{
+    background-color: #FFA775;
+    max-width: fit-content;
+    max-height: fit-content;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    padding: 8px;
+    cursor: pointer;
+    justify-self: right;
+}.plant-like-icon:active{
+    transform: scale(0.9);
+}
+.plant-like-icon img{
+    width: 15px;
+    height: 15px;
+}
+
+.plant-img{
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    border-radius: 10px;
+    cursor: pointer;
+    background-image: url(./img/plant-1.png);
+}
+.plant-stars{
+    display: flex;
+    gap: 5px;
 }
