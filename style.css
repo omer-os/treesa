@@ -282,7 +282,7 @@ html {
   transform: scale(.99) ;
 }
 .plant-like-icon {
-  background-color: #ffa775;
+  background-color: rgb(175, 175, 175);
   max-width: fit-content;
   max-height: fit-content;
   display: flex;
@@ -292,6 +292,9 @@ html {
   padding: 8px;
   cursor: pointer;
   justify-self: right;
+}
+.plant-like-icon.liked-true {
+  background-color: #ffa775;
 }
 .plant-like-icon:active {
   transform: scale(0.9);
